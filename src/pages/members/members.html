@@ -1,0 +1,76 @@
+<ion-header>
+  <ion-navbar color="dark">
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-searchbar [(ngModel)]="searchInput" [showCancelButton]="false" placeholder="Search...">
+    </ion-searchbar>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content padding>
+
+  <h1>Members Directory</h1>
+
+  <ion-card>
+
+    <ion-card-header>
+
+      <ion-searchbar id="memberSearch" placeholder="Search Members"></ion-searchbar>
+
+    </ion-card-header>
+
+    <ion-card-content>
+
+      <ion-row>
+        <ion-col>Name</ion-col>
+        <ion-col>Position</ion-col>
+        <ion-col>Department</ion-col>
+        <ion-col>Joined</ion-col>
+      </ion-row>
+
+
+      <div *ngFor="let member of members">
+        <ion-row (click)="showMember(member.id)">
+            <ion-col>
+              {{ member.name }}
+            </ion-col>
+            <ion-col>
+              {{ member.position }}
+            </ion-col>
+            <ion-col>
+              {{ member.department }}
+            </ion-col>
+            <ion-col>
+              {{ member.joined | date }}
+            </ion-col>
+        </ion-row>
+      </div>
+
+    </ion-card-content>
+
+
+
+    <ion-card-header>
+      <ion-row>
+        <ion-col text-muted>
+          Showing 2 out of 2 messages
+        </ion-col>
+        <ion-col col-4>
+        </ion-col>
+        <ion-col float-right col-4>
+          <button ion-button color="dark">
+            <ion-icon name="arrow-back"></ion-icon>
+          </button>
+          <button ion-button color="dark">
+            <ion-icon name="arrow-forward"></ion-icon>
+          </button>
+        </ion-col>
+      </ion-row>
+    </ion-card-header>
+
+  </ion-card>
+
+
+</ion-content>

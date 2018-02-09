@@ -38,14 +38,16 @@ $colors: (
   secondary:  #32db64,
   danger:     #f53d3d,
   light:      #f4f4f4,
-  dark:       #222
+  dark:       #222,
+  lightdark:  #333333
 );
 
 
 // App iOS Variables
 // --------------------------------------------------
 // iOS only Sass variables can go here
-
+$searchbar-ios-background-color: rgba(0, 0, 0, 0);
+$searchbar-ios-padding-horizontal: 2px;
 
 
 
@@ -85,4 +87,7 @@ $colors: (
 // --------------------------------------------------
 
 @import "roboto";
-@import "noto-sans";
+// @import "noto-sans";
+$font-family-md-base: "Lato";
+$font-family-ios-base: "Lato";
+$font-family-wp-base: "Lato";

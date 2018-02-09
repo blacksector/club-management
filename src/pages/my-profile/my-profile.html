@@ -1,0 +1,124 @@
+<ion-header>
+  <ion-navbar color="dark">
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-searchbar [(ngModel)]="searchInput" [showCancelButton]="false" placeholder="Search...">
+    </ion-searchbar>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content padding>
+
+  <div id="profileCard">
+    <ion-row>
+      <ion-col col-4>
+      </ion-col>
+      <ion-col col-4 text-center>
+        <img src="assets/imgs/logo.png"  />
+        <h1>{{ userFirstName }} {{ userLastName }}</h1>
+        <p style="color:grey">{{ userPosition }}</p>
+        <p style="color:grey">Member since 2018</p>
+      </ion-col>
+      <ion-col col-4>
+      </ion-col>
+    </ion-row>
+  </div>
+
+  <ion-row>
+    <ion-col>
+      <ion-card>
+        <ion-card-header>
+          Basic Information
+          <p float-right>
+            <a>Edit</a>
+          </p>
+        </ion-card-header>
+        <ion-card-content>
+          <ion-row>
+            <ion-col>
+              First Name
+            </ion-col>
+            <ion-col>
+              {{ userFirstName }}
+            </ion-col>
+          </ion-row>
+          <ion-row>
+            <ion-col>
+              Last Name
+            </ion-col>
+            <ion-col>
+              {{ userLastName }}
+            </ion-col>
+          </ion-row>
+          <ion-row>
+            <ion-col>
+              Gender Identity
+            </ion-col>
+            <ion-col>
+              {{ userGenderIdentity }}
+            </ion-col>
+          </ion-row>
+          <ion-row>
+            <ion-col>
+              Birthdate
+            </ion-col>
+            <ion-col>
+              {{ userBirthdate }}
+            </ion-col>
+          </ion-row>
+        </ion-card-content>
+      </ion-card>
+    </ion-col>
+  </ion-row>
+  <ion-row>
+    <ion-col>
+      <ion-card>
+        <ion-card-header>
+          Contact Information
+          <p float-right>
+            <a>Edit</a>
+          </p>
+        </ion-card-header>
+        <ion-card-content>
+          <ion-row>
+            <ion-col>
+              Personal Email
+            </ion-col>
+            <ion-col>
+              {{ userPersonalEmail }}
+            </ion-col>
+          </ion-row>
+          <ion-row>
+            <ion-col>
+              Club Email
+            </ion-col>
+            <ion-col>
+              {{ userClubEmail }}
+            </ion-col>
+          </ion-row>
+          <ion-row>
+            <ion-col>
+              Phone
+            </ion-col>
+            <ion-col>
+              {{ userPhone }}
+            </ion-col>
+          </ion-row>
+          <ion-row>
+            <ion-col>
+              Location
+            </ion-col>
+            <ion-col>
+              {{ userLocation }}
+            </ion-col>
+          </ion-row>
+        </ion-card-content>
+      </ion-card>
+    </ion-col>
+  </ion-row>
+
+
+
+</ion-content>

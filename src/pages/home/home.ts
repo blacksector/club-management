@@ -1,11 +1,17 @@
 import { Component } from '@angular/core';
-import { NavController } from 'ionic-angular';
+import { IonicPage, NavController } from 'ionic-angular';
 
+@IonicPage()
 @Component({
   selector: 'page-home',
   templateUrl: 'home.html'
 })
 export class HomePage {
+
+  searchInput: string;
+
+  userFirstName: string = "Omar";
+  userLastName: string = "Quazi";
 
   constructor(public navCtrl: NavController) {
 

@@ -1,0 +1,73 @@
+<ion-header>
+  <ion-navbar color="dark">
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-searchbar [(ngModel)]="searchInput" [showCancelButton]="false" placeholder="Search...">
+    </ion-searchbar>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content padding>
+
+  <h1>Inbox</h1>
+
+
+  <ion-card>
+
+    <ion-card-header>
+
+      <ion-searchbar id="inboxSearch" placeholder="Search Inbox"></ion-searchbar>
+
+    </ion-card-header>
+
+    <ion-card-content>
+
+      <ion-row>
+        <ion-col>From</ion-col>
+        <ion-col>Subject</ion-col>
+        <ion-col>Time</ion-col>
+      </ion-row>
+
+
+      <div *ngFor="let mail of inbox">
+        <ion-row>
+            <ion-col>
+              {{ mail.from }}
+            </ion-col>
+            <ion-col>
+              {{ mail.subject }}
+            </ion-col>
+            <ion-col>
+              {{ mail.time | date }}
+            </ion-col>
+        </ion-row>
+      </div>
+
+    </ion-card-content>
+
+
+
+    <ion-card-header>
+      <ion-row>
+        <ion-col text-muted>
+          Showing 2 out of 2 messages
+        </ion-col>
+        <ion-col col-4>
+        </ion-col>
+        <ion-col float-right col-4>
+          <button ion-button color="dark">
+            <ion-icon name="arrow-back"></ion-icon>
+          </button>
+          <button ion-button color="dark">
+            <ion-icon name="arrow-forward"></ion-icon>
+          </button>
+        </ion-col>
+      </ion-row>
+    </ion-card-header>
+
+  </ion-card>
+
+
+</ion-content>
